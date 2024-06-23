@@ -1,0 +1,125 @@
+:root {
+  --font-color: white;
+  --font-color_dark: #7c7c7c;
+  --font-color_light: #c9c9c9;
+
+  --primary-color: #4545c9;
+  --primary-color_darker: #2323c6;
+
+  --error-color: #ba1616;
+  --warning-color: #bb871f;
+
+  --neutral-color_light: rgb(163, 163, 163);
+  --neutral-color: grey;
+  --neutral-color_dark: rgb(101, 101, 101);
+  --neutral-color_background: rgba(101, 101, 101, 0.422);
+
+  --dialog-header-color_dark: rgb(42, 42, 42);
+  --dialog-sub-header-color_dark: rgb(25, 25, 25);
+  --dialog-background-color_dark: rgb(74, 74, 74);
+  --dialog-background-color_contrast_dark: rgb(125, 125, 125);
+  --dialog-background-color_with_opacity: #4a4a4ae3;
+  --dialog-background-color_darker: #393939;
+  --dialog-border-color_dark: #626262;
+  --selected-color: #6b6be1b3;
+  --selected-color_opacity: #6b6be17c;
+  --selected-color_light: #5151ff;
+
+  --background-color_contrast: #454548fc;
+  --background-color: rgb(43 45 51 / 97%);
+  --background-color_opacity: rgba(43, 45, 51, 0.638);
+  --background-color_light: rgb(43 45 51 / 99%);
+  --background-color_dark: rgb(43 45 51 / 99%);
+
+  --x-small-font-size: 8px;
+  --small-font-size: 11px;
+  --medium-font-size: 13px;
+  --large-font-size: 16px;
+  --x-large-font-size: 20px;
+
+  --small-icon-size: 22px;
+  --icon-size: 22px;
+
+  --border-radius: 10px;
+
+  --task-bar-height: 40px;
+  --margin: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "Segoe";
+  src:
+    local("Segoe"),
+    url(../src/assets/fonts/SegoeUIVF.ttf) format("truetype");
+}
+
+html {
+  font-family: Segoe, Avenir, Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  /* font-family: Segoe UI Variable, Avenir, Helvetica, Arial, sans-serif; */
+  word-break: normal;
+  tab-size: 4;
+  overflow: hidden;
+}
+
+.tox-notification--error {
+  visibility: hidden;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Custom scrollbar */
+
+/* Customize website's scrollbar like Mac OS
+Not supports in Firefox and IE */
+
+/* total width */
+::-webkit-scrollbar {
+  background-color: var(--dialog-background-color_dark);
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+}
+
+/* background of the scrollbar except button or resizer */
+::-webkit-scrollbar-track {
+  background-color: var(--dialog-background-color_dark);
+  border-radius: 12px;
+}
+
+/* scrollbar itself */
+::-webkit-scrollbar-thumb {
+  background-color: var(--dialog-background-color_contrast_dark);
+  border-radius: 12px;
+  border: 3px solid var(--dialog-background-color_dark);
+}
+
+/* set button(top and bottom of the scrollbar) */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--dialog-background-color_dark);
+}
